@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from quiz.models import Quiz, Question, Answer
 
-# Create your views here.
+
+
 def quizez(request):
     print('Кто-то посетил страницу')
     tests = Quiz.objects.all()

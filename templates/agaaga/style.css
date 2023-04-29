@@ -11,11 +11,6 @@ body{
 	overflow-y: hidden;
 }
 
-.bodd{
-	overflow-y: hidden;
-	background-color:#E6E6E6;
-}
-
 .register{
 	margin: 0;
 	padding: 0;
@@ -75,6 +70,20 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+
+
+.form__logos li:first-child{
+list-style-image:url('images/login.png');
+}
+.form__logos li:first-child + li{
+list-style-image:url('images/mail.png');
+}
+.form__logos li:first-child + li + li{
+list-style-image:url('images/password.png');
+}
+
+
+
 input{
 	border: none;
 	font-size: 20px;
@@ -122,7 +131,6 @@ input{
 	max-width: 1600px;
 	width: 100%;
 	margin:0 auto;
-	display: flex;
 }
 
 .containerr{
@@ -130,14 +138,6 @@ input{
 	width: 100%;
 	margin:0 auto;
 }
-
-.containerrr{
-	max-width: 1600px;
-	width: 100%;
-	margin:0 auto;
-	display: flex;
-}
-
 
 .container:after{
 	content: "";
@@ -156,8 +156,8 @@ input{
 	margin: 0;
 	width: 100%;
 	height: 100%;
-	background:
-	url("../images/second.jpg") center no-repeat;
+	background: 
+	url("images/second.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
 
@@ -166,8 +166,8 @@ input{
 .introtwo{
 	margin: 0;
 	width: 100%;
-
-	background:
+	height: 100%;
+	background: 
 	url("images/second.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
@@ -183,7 +183,7 @@ input{
 	top :0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	z-index: 1000;
 
 
 }
@@ -192,12 +192,12 @@ input{
 	width: 100%;
 	position: absolute;
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	top :0;
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background:
+	background: 
 	url("images/second.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
@@ -268,7 +268,7 @@ input{
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background:
+	background: 
 	url("images/second.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
@@ -293,7 +293,7 @@ input{
 }
 
 .logos__type{
-	display:flex;
+	display:flex; 
 	justify-content: space-between;
 }
 
@@ -309,7 +309,6 @@ input{
 	margin-top: -17px;
 	line-height: 1.3;
 
-
 }
 
 .sdelai{
@@ -317,21 +316,10 @@ input{
 	color:#E7BC4F;
 }
 
-.poisk{
-	padding: 0 15px;
-	margin-left:300px;
-	font-size: 16px;
-	border-radius: 30px;
-	color: #333;
-	background-color: #fff;
-	border:1px solid #333;
-
-}
-
 .logos{
 	width:100px;
 	top:0;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	margin-left: 410px;
 	margin-top: -48px;
@@ -382,7 +370,7 @@ input{
 .nav{
 	font-size: 14px;
 	text-transform: uppercase;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 
 }
@@ -463,11 +451,10 @@ input{
 }
 
 .almaty{
-	display: flex;
 	font-size: 40px;
 	font-weight: 700;
 	position: absolute;
-	margin-top: 60px;
+	margin-top: 40px;
 	margin-left: 150px;
 
 }
@@ -557,7 +544,7 @@ input{
 	position: absolute;
 	margin-left: 515px;
 	margin-top: 160px;
-
+	
 
 }
 
@@ -587,7 +574,6 @@ input{
 	margin-bottom: 30px;
 }
 
-
 .u__nameoneo{
 	display: flex;
 	width:1300px;
@@ -599,8 +585,6 @@ input{
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
-
-
 
 .u__nameoneooo{
 	display: flex;
@@ -813,57 +797,4 @@ input{
 	position: absolute;
 	margin-top: 40px;
 	margin-left: 180px;
-}
-
-.test_otstup{
-	display: block;
-	font-size: 30px;
-	margin-bottom: 100px;
-}
-
-.test_name{
-	text-align: center;
-	font-weight: bold;
-}
-
-.test_ramka{
-	margin-top:50px;
-	margin-left: 50px;
-	display: flex;
-	max-width: 1300px;
-	background-color: #fff;
-	border-radius: 30px;
-}
-
-.test_img{
-	margin-right: 50px;
-}
-
-.test_line{
-	display: block;
-	border-left: 1px solid #929292;
-
-}
-
-.test_spisok{
-	margin-left: 50px;
-}
-
-.test_head{
-	text-decoration: none;
-	color: #001895;
-	font-size: 26px;
-
-}
-
-.test_head:hover {
-	color: #E7BC4F;
-}
-
-.test_header{
-	font-size: 20px;
-}
-
-.ulu li.hide{
-	display: none;
 }

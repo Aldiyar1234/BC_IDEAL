@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Сайт</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>ВС</title>
 </head>
 <body>
-<a href="/1">Вторая страница</a>
-<br>
-<img width="300" src="{% static 'images/1.jpg' %}" alt="">
-<img width="300" src="{% static 'images/2.jpeg' %}" alt="">
+   <header class="header">
+
+
+      <div class="container">
+
+         <div class="logos__type">
+            <div class="header__logo">
+               <a class="sdelai" href="/">Сделай правильный выбор</a>
+
+            </div>
+
+
+         </div>
+
+      </div>
+
+
+   </header>
+
+
+   <div class="intro">
+      <div class="container">
+         <img class="odin" src="{% static 'images/logotype.png' %}">
+         <img class="dva" src="{% static 'images/first.png' %}">
+         <div class="txt">
+            <div class="txt1">best choice</div>
+            <div class="txt2"><ul><li>Мы поможем тебе сделать правильный выбор </li>
+                                  <li>Здесь ты сможешь пройти тест и узнать какая профессия подойдет тебе больше всего</li>
+                                  <li>Узнаешь самые важные факты всех ВУЗов Алматы</li>
+            <a href="/1" class="txt3">Тест</a>
+               </ul></div>
+         </div>
+      </div>
+   </div>
+   <div class="almaty">ВУЗы Алматы
+      <input class="poisk" type="text" placeholder="Поиск" id="ulu">
+   </div>
+   <div class="ramka">
+      <div class="lines">
+
+         <ul class="ulu">
+            <li class="nameso"><a href="agaaga/aga.html" class="names">Академия гражданской авиации (АГА)</a></li>
+            <li><a href="kainar/kainar.html" class="names">Академия Кайнар</a></li>
+            <li><a href="ALiT/alit.html" class="names">Академия Логистики и траснпорта (АЛиТ)</a></li>
+            <li><a href="aaes/aaes.html" class="names">Алматинская академия экономики и статистики (ААЭС)</a></li>
+            <li><a href="atu/atu.html" class="names">Алматинский технический университет (АТУ)</a></li>
+            <li><a href="aues/aues.html" class="names">Алматинский университет энергетики и связи имени Гумарбека Даукеева (АУЭС)</a></li>
+            <li><a href="almau/almau.html" class="names">Алматы Менеджмент Университет (AlmaU)</a></li>
+            <li><a href="eua/eua.html" class="names">Евразийская юридическая академия имени Д.А.Кунаева (ЕЮА им. Д. А. Кунаева )</a></li>
+            <li><a href="etu/etu.html" class="names">Евразийский Технологический Университет (ЕТУ)</a></li>
+            <li><a href="mubarak/mubarak.html" class="names">Египетский университет исламской культуры Нур-Мубарак</a></li>
+            <li><a href="kazadi/kazadi.html" class="names">Казахская автомобильно- дорожная академия имени Л.Гончарова (КазАДИ им. Гончарова)</a></li>
+            <li><a href="kazast/kazast.html" class="names">Казахская академия спорта и туризма (КазАСТ)</a></li>
+            <li><a href="kazatiso/kazatiso.html" class="names">Казахская академия труда и социальных отношений (КазАТиСО)</a></li>
+            <li><a href="kaznai/kaznai.html" class="names">Казахская национальная академия искусств имени Т.К.Жургенова (КазНАИ)</a></li>
+            <li><a href="kaznackon/kaznackon.html" class="names">Казахская национальная консерватория имени Курмангазы (КазНацКон)</a></li>
+            <li><a href="kaznau/kaznau.html" class="names">Казахский национальный аграрный университет (КазНАУ)</a></li>
+            <li><a href="kaznzhpu/kaznzhpu.html" class="names">Казахский национальный женский педагогический университет (КазНЖПУ)</a></li>
+            <li><a href="satbayev/satbayev.html" class="names">Казахский национальный исследовательский технический университет имени К.И.Сатпаева (Satbayev Univetsity)</a></li>
+            <li><a href="kaznmu/kaznmu.html" class="names">Казахский национальный медицинский университет имени С.Д.Асфендиярова (КазНМУ им.Асфендиярова)</a></li>
+            <li><a href="kaznpu/kaznpu.html" class="names">Казахский национальный педагогический университет имени Абая (КазНПУ им. Абая)</a></li>
+            <li><a href="kaznu/kaznu.html" class="names">Казахский национальный университет имени Аль-Фараби (КазНУ им. Аль-Фараби)</a></li>
+            <li><a href="kazumoimya/kazumoimya.html" class="names">Казахский университет международных отношений и мировых языков имени Абылай хана (КазУМОиМЯ им. Абылай хана)</a></li>
+            <li><a href="kups/kups.html" class="names">Казахский университет путей сообщений (КУПС)</a></li>
+            <li><a href="kazitu/kazitu.html" class="names">Казахстанский инженерно-технологический университет (КазИТУ)</a></li>
+            <li><a href="kbtu/kbtu.html" class="names">Казахстанско-Бритаский технический университет (КБТУ)</a></li>
+            <li><a href="knu/knu.html" class="names">Казахстанско-Немецкий университет (КНУ)</a></li>
+            <li><a href="krmu/krmu.html" class="names">Казахстанско-Российский медицинский университет (КРМУ)</a></li>
+            <li><a href="caspian/caspian.html" class="names">Каспийский университет (Caspian University)</a></li>
+            <li><a href="muit/muit.html" class="names">Международный университет информационных технологий (МУИТ)</a></li>
+            <li><a href="almaty/almaty.html" class="names">Университет “Алматы”</a></li>
+            <li><a href="turan/turan.html" class="names">Университет “Туран”</a></li>
+            <li><a href="kimep/kimep.html" class="names">Университет “КИМЭП”</a></li>
+            <li><a href="uiyaidk/uiyaidk.html" class="names">Университет иностранных языков и деловой карьеры (УИЯиДК)</a></li>
+            <li><a href="uib/uib.html" class="names">Университет международного бизнеса (UIB)</a></li>
+            <li class="nameto"><a href="narhoz/narhoz.html" class="namesonly">Университет Нархоз</a></li>
+         </ul>
+      </div>
+   </div>
+   <footer class="u__foots">
+      <div class="comu">
+      <div class="lin"></div>
+      <div class="fon"><p class="fonp">Все права защищены.</p> <p class="fonp">Best Choise - информационно-справочный портал для абитуриентов.</p><p class="fonp">Обратная связь: BestChoiseKZ@mail.ru</p> <p class="fonp">©2023 BC</p> </div>
+      <img class="logot" src="{% static 'images/logotype.png' %}" >
+      <div class="endlogo">Сделай правильный выбор</div>
+   </div>
+   </footer>
+   <script src="{% static 'js/search.js' %}"></script>
 </body>
 </html>

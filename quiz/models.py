@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 class Quiz(models.Model):
     name = models.CharField('Название', max_length=255)
     description = models.TextField('Описание')
