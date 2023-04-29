@@ -1,0 +1,25 @@
+
+a {
+    text-decoration: none;
+    background: lightgray;
+    padding: 10px;
+    display: block;
+    color: black;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 12px;
+    background: #001895;
+    color: white;
+}

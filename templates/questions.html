@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вопросы</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<a href="/1">Станица всех вопросов</a>
+<h1>{{quiz.name}}</h1>
+<form method="post">
+    {% csrf_token %}
+{% for question in questions %}
+<h2>{{question.name}}</h2>
+<select name="{{question.id}}">
+    <option value="YES">Да</option>
+    <option value="NO">Нет</option>
+</select>
+{% endfor %}
+<button type="submit">Завершить</button>
+</form>
+</body>
+</html>
