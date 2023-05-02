@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>B067</title>
@@ -11,32 +12,18 @@
 <body class="bod"> 
    <header class="headerr">
       
-      <img class="odinn" src="images/logotype.png" >
+      <img class="odinn" src="{% static 'images/logotype.png' %}" >
       <div class="containerr">
             
          <div class="logos__type">
             <div class="header__logo">
-               <a class="sdelai" href="../index.html">Сделай правильный выбор</a>
-               <div class="logos">
-               
-                     <img class="lupa" src="images/lupa.png">
-                     <img class="man" src="images/man.png">
-               
-               </div>
-            </div>
-            <nav class="nav" >
-               <a href="#" class="nav__click1">Поиск</a>
-                  
-               <a class="nav__click2" href="../register.html">Вход/Регистрация</a>
-                     
-            </nav>
-
+               <a class="sdelai" href="/">Сделай правильный выбор</a>
          </div>     
       </div>    
      
       
    </header>
-   <img class="logou" src="images/aga.jpg" >
+   <img class="logou" src="{% static 'images/aga.jpg' %}" >
    <div class="u__name">Академия Гражданской Авиации</div>
    <div class="u__line"></div>
    <div class="u__nameoneoo">
@@ -87,7 +74,7 @@
       <div class="comu">
       <div class="lin"></div>
       <div class="fon"><p class="fonp">Все права защищены.</p> <p class="fonp">Best Choise - информационно-справочный портал для абитуриентов.</p><p class="fonp">Обратная связь: BestChoiseKZ@mail.ru</p> <p class="fonp">©2023 BC</p> </div>
-      <img class="logot" src="images/logotype.png" >
+      <img class="logot" src="{% static 'images/logotype.png' %}" >
       <div class="endlogo">Сделай правильный выбор</div>
    </div>
    </footer>

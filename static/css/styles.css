@@ -47,62 +47,6 @@ h1,h2,h3,h4,h5,h6 {
 	box-sizing: border-box;
 }
 
-.form{
-
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	background-color: #fff;
-	z-index: 1100;
-	width:700px;
-	height: 500px;
-	justify-content: center;
-	align-items: center;
-	top:20%;
-	margin-left: 400px;
-	border-radius: 50px;
-
-
-}
-
-.form__title{
-	font-weight: bold;
-	font-size: 40px;
-	margin-top: -30px;
-	margin-bottom: 30px;
-	text-align: center;
-
-}
-
-input{
-	border: none;
-	font-size: 20px;
-	line-height: 2;
-	color:#333;
-	width: 600px;
-}
-
-
-.form__fields{
-	width:600px;
-	border: 1px solid #333;
-	border-left: 0;
-	border-right: 0;
-	border-top: 0;
-	align-items: center;
-	list-style-position: inside;
-    padding-left: 0;
-    padding-top:30px;
-
-}
-
-.form__button{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-
-}
 
 .but{
 	padding: 20px 100px;
@@ -156,8 +100,8 @@ input{
 	width: 100%;
 	height: 100%;
 	background:
-	url("../images/second.jpg") center no-repeat;
-	-webkit-background-size: cover;
+	url("/static/images/second.jpg") center no-repeat;
+	background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
 
 }
@@ -165,10 +109,10 @@ input{
 .introtwo{
 	margin: 0;
 	width: 100%;
-
+	height: 100%;
 	background:
-	url("images/second.jpg") center no-repeat;
-	-webkit-background-size: cover;
+	url("/static/images/second.jpg") center no-repeat;
+	background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
 	opacity: 0.3;
 
@@ -191,14 +135,14 @@ input{
 	width: 100%;
 	position: absolute;
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	top :0;
 	left: 0;
 	right: 0;
 	z-index: 1000;
 	background:
-	url("images/second.jpg") center no-repeat;
-	-webkit-background-size: cover;
+	url("/static/images/second.jpg") center no-repeat;
+	background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
 
 }
@@ -268,8 +212,8 @@ input{
 	right: 0;
 	z-index: 1000;
 	background:
-	url("images/second.jpg") center no-repeat;
-	-webkit-background-size: cover;
+	url("/static/images/second.jpg") center no-repeat;
+	background-size: cover;
 	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.5);
 	opacity: 0.3;
 }
@@ -324,7 +268,7 @@ input{
 	color: #333;
 	background-color: #fff;
 	border:1px solid #333;
-
+	width: 600px;
 }
 
 .logos{
@@ -391,12 +335,12 @@ input{
 	text-align: center;
 	text-decoration:none ;
 	display:inline-block;
-	margin:0 -70px;
-	padding: 5px 300px 0px 50px;
+	margin: 0 -70px;
+	padding: 5px 300px 0 50px;
 	border-radius: 90px;
 	background: #fff;
 	color: #333;
-	margin-right:100px;
+	margin-right: 100px;
 
 }
 
@@ -753,14 +697,14 @@ input{
 }
 
 .comu{
-	display: block;
+	display: flex;
 	left:0;
 	background: rgba(0, 0, 0, 0.6);
 	position: absolute;
 	width:100vw;
 	height: 150px;
 }
-}
+
 
 .lin{
 	content: "";

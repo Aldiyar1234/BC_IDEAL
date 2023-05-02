@@ -3,18 +3,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Вторая страница</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tests.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>Тесты</title>
 </head>
-<body>
-<a href="/">Начальная страница</a>
-<h1>Число: {{number}}</h1>
-{% for quiz in tests %}
-<a href="/quizez/{{quiz.pk}}">
-    <img src="{{ quiz.image.url }}" alt="">
-    <h2>Тест - {{quiz.name}}</h2>
-    <p>{{quiz.description}}</p>
-</a>
-{% endfor %}
+
+<body class="bodd">
+   <header class="headerr">
+
+      <img class="odinn" src="{% static 'images/logotype.png' %}" >
+      <div class="containerr">
+
+         <div class="logos__type">
+            <div class="header__logo">
+               <a class="sdelai" href="/">Сделай правильный выбор</a>
+            </div>
+         </div>
+      </div>
+
+
+   </header>
+   <div class="test_prosto_otstup">AAAAAAAAA</div>
+    {% for quiz in tests %}
+    <a class="test_test" href="/quizez/{{quiz.pk}}">
+        <img class="test_kartinka" src="{{ quiz.image.url }}" alt="">
+        <p class="test_par">Тест - {{quiz.name}}</p>
+        <p class="test_sar">{{quiz.description}}</p>
+    </a>
+    {% endfor %}
 </body>
+
+   <footer class="u__footsecond">
+      <div class="comu">
+      <div class="lin"></div>
+      <div class="fon"><p class="fonp">Все права защищены.</p> <p class="fonp">Best Choise - информационно-справочный портал для абитуриентов.</p><p class="fonp">Обратная связь: BestChoiseKZ@mail.ru</p> <p class="fonp">©2023 BC</p> </div>
+      <img class="logot" src="{% static 'images/logotype.png' %}" >
+      <div class="endlogo">Сделай правильный выбор</div>
+      </div>
+   </footer>
+
 </html>
