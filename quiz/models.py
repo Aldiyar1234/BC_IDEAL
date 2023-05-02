@@ -12,6 +12,7 @@ class Quiz(models.Model):
 
 class Answer(models.Model):
     name = models.CharField('Ответ', max_length=255)
+    description = models.TextField('Описание')
 
     def __str__(self):
         return self.name

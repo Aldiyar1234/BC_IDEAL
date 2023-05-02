@@ -16,13 +16,13 @@ def questions(request, pk):
     if request.method == "POST":
         answers = {}
         for question in questions:
-            answers[question.answer.name] = 0
+            answers[question.answer] = 0
 
         for pk in request.POST:
             if pk.isdigit():
                 if request.POST[pk] == "YES":
                     question = questions.get(pk=pk)
-                    answers[question.answer.name] += question.points
+                    answers[question.answer] += question.points
 
         result = max(answers, key = answers.get)
 
