@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/tests.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/test.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>Гранты</title>
 </head>
 <body>
 <div class="result">
-    <h1>{{result.name}}</h1>
-    <p>{{ result.description }}</p>
+    <h1 class="result_h">{{result.name}}</h1>
+    <p class="result_p">{{ result.description }}</p>
+    <a class="result_a" href="/">ЗАВЕРШИТЬ</a>
 </div>
 </body>
 </html>
