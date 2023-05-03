@@ -11,8 +11,12 @@
 </head>
 <body>
 <div class="result">
-    <h1 class="result_h">{{result.name}}</h1>
+{% for result in results %}
+
+    <h3 class="result_h">{{result.name}}</h3>
     <p class="result_p">{{ result.description }}</p>
+
+{% endfor %}
     <a class="result_a" href="/">ЗАВЕРШИТЬ</a>
 </div>
 </body>

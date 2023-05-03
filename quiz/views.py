@@ -24,8 +24,16 @@ def questions(request, pk):
                     question = questions.get(pk=pk)
                     answers[question.answer] += question.points
 
-        result = max(answers, key = answers.get)
-
-        return render(request, 'results.html', {'result': result})
+        if sum(answers.values()) == 0:
+            results = [{'name': 'Не знаем!','description':'Чтобы мы смогли определить подходящую профессию для вас вам нужно ответить "ДА" хотя бы на один вопрос!!!'}]
+        else:
+            result = max(answers, key = answers.get)
+            points = answers[result]
+            results = []
+            for answer in answers:
+                if answers[answer] == points:
+                    results.append(answer)
+        print(results)
+        return render(request, 'results.html', {'results': results})
 
     return render(request, 'questions.html', {'questions': questions, 'quiz': quiz})
