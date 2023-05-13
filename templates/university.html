@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/almauu.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>{{ university.name }}</title>
+</head>
+<body class="">
+   <header class="headerr">
+
+      <img class="odinn" src="{% static 'images/logotype.png' %}" >
+      <div class="containerr">
+
+         <div class="logos__type">
+            <div class="header__logo">
+               <a class="sdelai" href="/">Сделай правильный выбор</a>
+            </div>
+         </div>
+      </div>
+
+
+   </header>
+   <div class="u__name">{{ university.name }}</div>
+   <div class="u__line"></div>
+   <div class="row">
+       <div class="col">
+           {% for fact in university_left_facts %}
+           <p>{{ fact.name }}</p>
+           {% endfor %}
+       </div>
+       <div class="col">
+           <img class="university-logo" src="{{ university.image.url }}" >
+       </div>
+       <div class="col">
+           {% for fact in university_right_facts %}
+           <p>{{ fact.name }}</p>
+           {% endfor %}
+       </div>
+   </div>
+   <div class="">
+      <div class="">На выбор более 20-ти специальностей</div>
+      <div class="">Вся информация несёт информативный характер!</div>
+   </div>
+   <div class="">
+      <a href="http://www.almau.edu.kz" class="hyper">almau.edu.kz</a>
+      <a href="/almau_first/" class="">Гранты 2022</a>
+
+   </div>
+
+
+   <footer class="">
+      <div class="">
+      <div class=""></div>
+      <div class=""><p class="">Все права защищены.</p> <p class="">Best Choise - информационно-справочный портал для абитуриентов.</p><p class="fonp">Обратная связь: BestChoiseKZ@mail.ru</p> <p class="fonp">©2023 BC</p> </div>
+      <img class="" src="{% static 'images/logotype.png' %}" >
+      <div class="">Сделай правильный выбор</div>
+      </div>
+   </footer>
+</body>
+</html>
