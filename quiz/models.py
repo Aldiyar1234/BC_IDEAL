@@ -26,3 +26,31 @@ class Question(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class University(models.Model):
+    name = models.CharField('Название', max_length=255)
+    href = models.CharField('Ссылка на университет', max_length=255)
+    image = models.ImageField('Логотип', upload_to="logo")
+    url = models.SlugField('Ссылка')
+    fact = models.CharField('Факт', blank=True, max_length=255)
+    abb = models.CharField('Аббревиатура', blank=True, max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class UniversityLeftFact(models.Model):
+    university = models.ForeignKey(University, on_delete=models.CASCADE)
+    name = models.CharField('Факт', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class UniversityRightFact(models.Model):
+    university = models.ForeignKey(University, on_delete=models.CASCADE)
+    name = models.CharField('Факт', max_length=255)
+
+    def __str__(self):
+        return self.name

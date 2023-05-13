@@ -3,7 +3,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
-from quiz.views import quizez, questions
+from quiz.views import quizez, questions, university_view
 
 
 urlpatterns = [
@@ -291,6 +291,9 @@ urlpatterns = [
     path('narhoz_first_eleven/', TemplateView.as_view(template_name='narhoz/narhoz_first_eleven.html')),
     path('narhoz_first_twelve/', TemplateView.as_view(template_name='narhoz/narhoz_first_twelve.html')),
     path('1/', quizez),
-    path('quizez/<int:pk>', questions)
+    path('quizez/<int:pk>', questions),
+    path('university/<str:url>', university_view)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
 

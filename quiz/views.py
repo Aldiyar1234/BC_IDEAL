@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from quiz.models import Quiz, Question, Answer
+from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact
 
 
 
 def quizez(request):
     print('Кто-то посетил страницу')
     tests = Quiz.objects.all()
-    return render(request, 'second_page.html', {'tests': tests, 'number': 5})
+    return render(request, 'second_page.html', {'tests': tests})
 
 
 def questions(request, pk):
@@ -37,3 +37,10 @@ def questions(request, pk):
         return render(request, 'results.html', {'results': results})
 
     return render(request, 'questions.html', {'questions': questions, 'quiz': quiz})
+
+
+def university_view(request, url):
+    university = University.objects.get(url=url)
+    university_left_facts = UniversityLeftFact.objects.filter(university=university)
+    university_right_facts = UniversityRightFact.objects.filter(university=university)
+    return render(request, 'university.html', {"university": university,"university_right_facts": university_right_facts, "university_left_facts": university_left_facts})
