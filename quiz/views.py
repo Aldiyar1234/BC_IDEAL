@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact
+from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact, Major
 
 
 
@@ -44,3 +44,20 @@ def university_view(request, url):
     university_left_facts = UniversityLeftFact.objects.filter(university=university)
     university_right_facts = UniversityRightFact.objects.filter(university=university)
     return render(request, 'university.html', {"university": university,"university_right_facts": university_right_facts, "university_left_facts": university_left_facts})
+
+
+def homepage(request):
+    universitys = University.objects.all()
+    return render(request, 'index.html', {'universitys': universitys} )
+
+
+def major_group(request, university):
+    university = University.objects.get(url=university)
+    majors = Major.objects.filter(university=university)
+    return render(request, 'majors.html', {'majors': majors,'university':university})
+
+
+def major_detail(request, university, pk):
+    university = University.objects.get(url=university)
+    major = Major.objects.get(pk=pk)
+    return render(request, 'major.html', {'major': major, 'university': university})

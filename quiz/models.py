@@ -28,6 +28,13 @@ class Question(models.Model):
         return self.name
 
 
+class UniversityCategory(models.Model):
+    name = models.CharField('Название', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
 class University(models.Model):
     name = models.CharField('Название', max_length=255)
     href = models.CharField('Ссылка на университет', max_length=255)
@@ -35,6 +42,11 @@ class University(models.Model):
     url = models.SlugField('Ссылка')
     fact = models.CharField('Факт', blank=True, max_length=255)
     abb = models.CharField('Аббревиатура', blank=True, max_length=255)
+    category = models.ForeignKey(UniversityCategory , on_delete=models.CASCADE, blank=True, null=True)
+    amount_of_students = models.PositiveIntegerField('Количество студентов', blank=True)
+
+    class Meta:
+        ordering = ["name"]
 
     def __str__(self):
         return self.name
@@ -51,6 +63,19 @@ class UniversityLeftFact(models.Model):
 class UniversityRightFact(models.Model):
     university = models.ForeignKey(University, on_delete=models.CASCADE)
     name = models.CharField('Факт', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+class Major(models.Model):
+    university = models.ForeignKey(University, on_delete=models.CASCADE)
+    name = models.CharField('Название специальности', max_length=255)
+    code = models.CharField('Код', max_length=255)
+    minimum_ball = models.PositiveSmallIntegerField('Пороговый балл')
+    minimum_grant_ball = models.PositiveSmallIntegerField('Минимальный балл')
+    maximum_ball = models.PositiveSmallIntegerField('Максимальный балл')
+    avg_ball = models.PositiveSmallIntegerField('Средний балл')
+    amount_of_grants = models.PositiveSmallIntegerField('Количество грантов')
 
     def __str__(self):
         return self.name

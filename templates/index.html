@@ -10,93 +10,37 @@
     <title>ВС</title>
 </head>
 <body>
-   <header class="header">
-
-
-      <div class="container">
-
-         <div class="logos__type">
-            <div class="header__logo">
-               <a class="sdelai" href="/">Сделай правильный выбор</a>
-
-            </div>
-
-
-         </div>
-
-      </div>
-
-
-   </header>
+    {% include 'header.html' %}
 
 
    <div class="intro">
-      <div class="container">
-         <img class="odin" src="{% static 'images/logotype.png' %}">
-         <img class="dva" src="{% static 'images/first.png' %}">
-         <div class="txt">
-            <div class="txt1">best choice</div>
-            <div class="txt2"><ul><li>Мы поможем тебе сделать правильный выбор </li>
-                                  <li>Здесь ты сможешь пройти тест и узнать какая профессия подойдет тебе больше всего</li>
-                                  <li>Узнаешь самые важные факты всех ВУЗов Алматы</li>
-            <a href="/1" class="txt3">Тест</a>
-               </ul></div>
+      <div class="container row">
+         <img src="{% static 'images/first.png' %}">
+         <div>
+            <ul class="intro-text">
+                <li>Мы поможем тебе сделать правильный выбор </li>
+                <li>Здесь ты сможешь пройти тест и узнать какая профессия подойдет тебе больше всего</li>
+                <li>Узнаешь самые важные факты всех ВУЗов Алматы</li>
+           </ul>
+            <a href="/1" class="btn my-30"><h2>Тест</h2></a>
          </div>
       </div>
    </div>
-   <div class="almaty">ВУЗы Алматы
-      <input class="poisk" type="text" placeholder="Поиск" id="ulu">
-   </div>
-   <div class="ramka">
-      <div class="lines">
 
-         <ul class="ulu">
-            <li class="nameso"><a href="/aga/" class="names">Академия гражданской авиации (АГА)</a></li>
-            <li><a href="/kainar/" class="names">Академия Кайнар</a></li>
-            <li><a href="/alit/" class="names">Академия Логистики и траснпорта (АЛиТ)</a></li>
-            <li><a href="/aaes/" class="names">Алматинская академия экономики и статистики (ААЭС)</a></li>
-            <li><a href="/atu/" class="names">Алматинский технический университет (АТУ)</a></li>
-            <li><a href="/aues/" class="names">Алматинский университет энергетики и связи имени Гумарбека Даукеева (АУЭС)</a></li>
-            <li><a href="/almau/" class="names">Алматы Менеджмент Университет (AlmaU)</a></li>
-            <li><a href="/eua/" class="names">Евразийская юридическая академия имени Д.А.Кунаева (ЕЮА им. Д. А. Кунаева )</a></li>
-            <li><a href="/etu/" class="names">Евразийский Технологический Университет (ЕТУ)</a></li>
-            <li><a href="/mubarak/" class="names">Египетский университет исламской культуры Нур-Мубарак</a></li>
-            <li><a href="/kazadi/" class="names">Казахская автомобильно- дорожная академия имени Л.Гончарова (КазАДИ им. Гончарова)</a></li>
-            <li><a href="/kazast/" class="names">Казахская академия спорта и туризма (КазАСТ)</a></li>
-            <li><a href="/kazatiso/" class="names">Казахская академия труда и социальных отношений (КазАТиСО)</a></li>
-            <li><a href="/kaznai/" class="names">Казахская национальная академия искусств имени Т.К.Жургенова (КазНАИ)</a></li>
-            <li><a href="/kaznackon/" class="names">Казахская национальная консерватория имени Курмангазы (КазНацКон)</a></li>
-            <li><a href="/kaznau/" class="names">Казахский национальный аграрный университет (КазНАУ)</a></li>
-            <li><a href="/kaznzhpu/" class="names">Казахский национальный женский педагогический университет (КазНЖПУ)</a></li>
-            <li><a href="/satbayev/" class="names">Казахский национальный исследовательский технический университет имени К.И.Сатпаева (Satbayev Univetsity)</a></li>
-            <li><a href="/kaznmu/" class="names">Казахский национальный медицинский университет имени С.Д.Асфендиярова (КазНМУ им.Асфендиярова)</a></li>
-            <li><a href="/kaznpu/" class="names">Казахский национальный педагогический университет имени Абая (КазНПУ им. Абая)</a></li>
-            <li><a href="/kaznu/" class="names">Казахский национальный университет имени Аль-Фараби (КазНУ им. Аль-Фараби)</a></li>
-            <li><a href="/kazumoimya/" class="names">Казахский университет международных отношений и мировых языков имени Абылай хана (КазУМОиМЯ им. Абылай хана)</a></li>
-            <li><a href="/kups/" class="names">Казахский университет путей сообщений (КУПС)</a></li>
-            <li><a href="/kazitu/" class="names">Казахстанский инженерно-технологический университет (КазИТУ)</a></li>
-            <li><a href="/kbtu/" class="names">Казахстанско-Бритаский технический университет (КБТУ)</a></li>
-            <li><a href="/knu/" class="names">Казахстанско-Немецкий университет (КНУ)</a></li>
-            <li><a href="/krmu/" class="names">Казахстанско-Российский медицинский университет (КРМУ)</a></li>
-            <li><a href="/caspian/" class="names">Каспийский университет (Caspian University)</a></li>
-            <li><a href="/muit/" class="names">Международный университет информационных технологий (МУИТ)</a></li>
-            <li><a href="/almaty/" class="names">Университет “Алматы”</a></li>
-            <li><a href="/turan/" class="names">Университет “Туран”</a></li>
-            <li><a href="/kimep/" class="names">Университет “КИМЭП”</a></li>
-            <li><a href="/uiyaidk/" class="names">Университет иностранных языков и деловой карьеры (УИЯиДК)</a></li>
-            <li><a href="/uib/" class="names">Университет международного бизнеса (UIB)</a></li>
-            <li class="nameto"><a href="/narhoz/" class="namesonly">Университет Нархоз</a></li>
-         </ul>
-      </div>
+
+    <div class="my-30">
+   <div class="container">
+       <input class="university-search" type="text" placeholder="Поиск" id="ulu">
+       <h2>ВУЗы Алматы</h2>
+
+       <ul class="university-list my-30 ulu">
+           {% for university in universitys %}
+               <li><a href="/university/{{ university.url }}">{{ university.name }} ({{university.abb}})</a></li>
+           {% endfor %}
+     </ul>
    </div>
-   <footer class="u__foots">
-       <div class="comu">
-      <div class="lin"></div>
-      <div class="fon"><p class="fonp">Все права защищены.</p> <p class="fonp">Best Choise - информационно-справочный портал для абитуриентов.</p><p class="fonp">Обратная связь: BestChoiseKZ@mail.ru</p> <p class="fonp">©2023 BC</p> </div>
-      <img class="logot" src="{% static 'images/logotype.png' %}" >
-      <div class="endlogo">Сделай правильный выбор</div>
-       </div>
-   </footer>
+        </div>
+    {% include 'footer.html' %}
    <script src="{% static 'js/search.js' %}"></script>
 </body>
 </html>

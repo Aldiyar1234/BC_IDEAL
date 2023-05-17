@@ -1,9 +1,9 @@
 document.querySelector('#ulu').oninput = function () {
-	let val = this.value.trim();
+	let val = this.value.trim().toLowerCase();
 	let elasticItems = document.querySelectorAll('.ulu li');
 	if (val != '') {
 		elasticItems.forEach(function (elem) {
-			if(elem.innerText.search(val) == -1) {
+			if(elem.innerText.toLowerCase().search(val) == -1) {
 				elem.classList.add('hide');
 			}
 			else {

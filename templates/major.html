@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>ВС</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>{{ university.name }}</h1>
+    <h2>{{ major.name }}</h2>
+    <ul>
+        <li>Пороговый балл: {{ major.minimum_ball }}</li>
+        <li>Минимальный балл: {{ major.minimum_grant_ball }}</li>
+        <li>Максимальный балл: {{ major.maximum_ball }}</li>
+        <li>Средний балл: {{ major.avg_ball }}</li>
+        <li>Количество грантов: {{ major.amount_of_grants }}</li>
+    </ul>
+    {% include 'footer.html' %}
+</body>
+</html>
