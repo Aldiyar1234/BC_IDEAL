@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>ВС</title>
@@ -18,11 +18,11 @@
          <img src="{% static 'images/first.png' %}">
          <div>
             <ul class="intro-text">
-                <li>Мы поможем тебе сделать правильный выбор </li>
-                <li>Здесь ты сможешь пройти тест и узнать какая профессия подойдет тебе больше всего</li>
-                <li>Узнаешь самые важные факты всех ВУЗов Алматы</li>
+                <li class="li-text">Мы поможем тебе сделать правильный выбор </li>
+                <li class="li-text">Здесь ты сможешь пройти тест и узнать какая профессия подойдет тебе больше всего</li>
+                <li class="li-text">Узнаешь самые важные факты всех ВУЗов Алматы</li>
            </ul>
-            <a href="/1" class="btn my-30"><h2>Тест</h2></a>
+            <a href="/1" class="btn-3"><h2>Тест</h2></a>
          </div>
       </div>
    </div>
@@ -35,7 +35,7 @@
 
        <ul class="university-list my-30 ulu">
            {% for university in universitys %}
-               <li><a href="/university/{{ university.url }}">{{ university.name }} ({{university.abb}})</a></li>
+               <li><a href="/university/{{ university.url }}" class="list-a">{{ university.name }} ({{university.abb}})</a></li>
            {% endfor %}
      </ul>
    </div>

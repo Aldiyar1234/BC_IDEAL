@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>Гранты</title>
 </head>
 <body>
-{% include 'header.html' %}
+{% include 'headerfirst.html' %}
 <div class="result container">
 {% for result in results %}
     <h3 class="my-30">{{result.name}}</h3>
     <p>{{ result.description }}</p>
 {% endfor %}
-    <a class="btn my-30" href="/">ЗАВЕРШИТЬ</a>
+    <a class="btn btn-4" href="/">ЗАВЕРШИТЬ</a>
 </div>
 {% include 'footer.html' %}
 </body>

@@ -21,6 +21,15 @@ header {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.head{
+	position: relative;
+	z-index: 999;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	background: url(/static/images/second.jpg) center no-repeat;
+	background-size: cover;
+	box-shadow: inset 800px 800px 250px 250px rgba(0, 0, 0, 0.3);
+}
+
 footer {
 	margin-top: auto;
 	background-color: #333333;
@@ -30,6 +39,10 @@ footer {
 
 a {
 	text-decoration: none;
+}
+
+a:hover{
+	color:#333333;
 }
 
 .my-30 {
@@ -48,12 +61,47 @@ a {
 .btn {
 	display: block;
 	width: fit-content;
-	padding: 10px 20px;
+	padding: 10px 70px;
 	background-color: #e0be63;
-	border-radius: 12px;
+	border-radius: 15px;
 	color: white;
 	outline: 0;
 	border: none;
+}
+
+.btn-2{
+	font-weight: 700;
+	color:#333333;
+	background-color: white;
+	font-size: 25px;
+	border:2px solid #333333;
+	border-radius: 50px;
+	padding: 5px 50px;
+}
+
+.btn-2:hover{
+	color: #e0be63;
+}
+
+.btn-3{
+	display: block;
+	width: fit-content;
+	color: white;
+	background-color: #e0be63;
+	border-radius: 40px;
+	padding: 5px 100px;
+	margin-top: 80px;
+	margin-left: 70px;
+	font-size: 20px;
+}
+
+.btn-4{
+	font-size: 20px;
+	margin:30px auto;
+	padding: 10px 70px;
+	background-color: #e0be63;
+	border-radius: 15px;
+	color: white;
 }
 
 .title {
@@ -73,10 +121,16 @@ a {
 }
 
 .col{
-	vertical-align: top;
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	width: 500px;
 	margin: 1%;
+	text-align: center;
+}
+
+.colo{
+	color: red;
 }
 
 .university-logo {
@@ -129,7 +183,7 @@ a {
 }
 
 .intro img {
-	width: 75%;
+	width:60%;
 }
 
 .intro .container {
@@ -145,12 +199,15 @@ a {
 	background: #fff9e7;
 	border-radius: 12px;
 	color: black;
+	font-size: 20px;
 }
 
 
 
 .card img {
 	margin-right: 50px;
+	width: 200px;
+	border-radius: 12px;
 }
 
 .card-body{
@@ -167,11 +224,19 @@ a {
 	margin-left: 50px;
 	padding: 10px 40px;
 	border-radius: 12px;
+	background-color: #e0be63;
 }
 
 .end-test {
-	padding: 10px 20px;
-	margin-left: auto;
+	color: black;
+	font-size: 20px;
+	padding: 10px 50px;
+	border-radius: 50px;
+	margin-left: 300px;
+}
+
+.end-test:hover{
+	color: white;
 }
 
 .result {
@@ -201,3 +266,53 @@ a {
 	display: none;
 }
 
+.li-text{
+	margin: 20px auto;
+}
+
+.list-a:hover{
+	color: #e0be63;
+}
+
+.opacity{
+	opacity: 10%;
+}
+
+.lists{
+	display: block;
+	text-align: center;
+	width: 1000px;
+	margin:10px auto;
+	background-color: white;
+	padding:10px 50px;
+	border-radius: 30px;
+}
+
+.lists-a{
+	color: black;
+}
+
+.lists-a:hover{
+	color: #e0be63;
+}
+
+.lists-area{
+	margin: 20px auto;
+	padding: 0 50px;
+	background-color:#D9D9D9;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+
+.col-ul{
+	list-style-type:none;
+}
+
+.col-line{
+	font-weight: bold;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+p{
+	margin: 10px;
+}

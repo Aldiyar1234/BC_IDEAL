@@ -4,22 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>ВС</title>
 </head>
 <body>
-    {% include 'header.html' %}
-    <h1>{{ university.name }}</h1>
-    <h2>{{ major.name }}</h2>
-    <ul>
-        <li>Пороговый балл: {{ major.minimum_ball }}</li>
-        <li>Минимальный балл: {{ major.minimum_grant_ball }}</li>
-        <li>Максимальный балл: {{ major.maximum_ball }}</li>
-        <li>Средний балл: {{ major.avg_ball }}</li>
-        <li>Количество грантов: {{ major.amount_of_grants }}</li>
-    </ul>
+    {% include 'headerfirst.html' %}
+    <h1 class="title my-30">{{ university.name }}</h1>
+    <div class="row container">
+        <div class="col">
+            <ul class="col-ul">
+                <li>Пороговый балл <p class="col-line">{{ major.minimum_ball }}</p></li>
+                <li>Минимальный балл <p class="col-line">{{ major.minimum_grant_ball }}</p></li>
+                <li>Максимальный балл <p  class="col-line">{{ major.maximum_ball }}</p></li>
+                <li>Средний балл <p class="col-line">{{ major.avg_ball }}</p></li>
+                <li>Количество грантов <p class="col-line">{{ major.amount_of_grants }}</p></li>
+            </ul>
+        </div>
+        <div class="col">
+           <img class="university-logo" src="{{ university.image.url }}" >
+        </div>
+        <div class="col">
+            <p>Категория <p class="col-line">{{ university.category }}</p></p>
+            <p>Количество обучающихся <p class="col-line">{{ university.amount_of_students }}</p></p>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col">
+            <a href="http://{{ university.href }}" class="">{{ university.href }}</a>
+        </div>
+        <div class="col">
+            <h2>{{ major.code }} {{ major.name }}</h2>
+        </div>
+        <div class="col">
+            <div class="colo">Вся информация несёт информативный характер!</div>
+        </div>
+
+    </div>
     {% include 'footer.html' %}
 </body>
 </html>

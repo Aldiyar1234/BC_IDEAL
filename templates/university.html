@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>{{ university.name }}</title>
 </head>
 <body class="">
-    {% include 'header.html' %}
+    {% include 'headerfirst.html' %}
 
    <h1 class="title my-30">{{ university.name }}</h1>
    <div class="row container">
@@ -34,11 +34,10 @@
            <a href="http://{{ university.href }}" class="">{{ university.href }}</a>
        </div>
        <div class="col">
-          <div class="">На выбор более 20-ти специальностей</div>
-          <div class="">Вся информация несёт информативный характер!</div>
+          <div class="colo">Вся информация несёт информативный характер!</div>
        </div>
        <div class="col">
-            <a href="/university/{{ university.url }}/majors" class="btn">Гранты 2022</a>
+            <a href="/university/{{ university.url }}/majors" class="btn-2">Гранты 2022</a>
        </div>
    </div>
 

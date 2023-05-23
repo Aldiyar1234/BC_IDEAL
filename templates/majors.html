@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <title>ВС</title>
 </head>
 <body>
-    {% include 'header.html' %}
-    <h1>{{ university.name }}</h1>
+    {% include 'headeropacity.html' %}
+    <div class="lists-area">
     {% for major in majors %}
-        <p><a href="/university/{{ university.url }}/majors/{{ major.pk }}">{{ major.code }} {{ major.name }}</a></p>
+            <p class="lists"><a href="/university/{{ university.url }}/majors/{{ major.pk }}" class="lists-a">{{ major.code }} {{ major.name }}</a></p>
     {% endfor %}
-    {% include 'footer.html' %}
+    </div>
+    {% include 'footeropacity.html' %}
 </body>
 </html>
