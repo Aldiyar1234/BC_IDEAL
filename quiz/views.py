@@ -1,7 +1,7 @@
 from itertools import groupby
 
 from django.shortcuts import render
-from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact, Major, Subject
+from quiz.models import Quiz, Question,  University, UniversityRightFact, UniversityLeftFact, Major, Subject
 
 
 
@@ -72,15 +72,30 @@ def major_detail(request, university, pk):
 
 def filters(request):
     majors = None
+    universitys = University.objects.all()
     subjects = Subject.objects.all()
+    university = request.GET.get('university')
     subject1 = request.GET.get('subject1')
     subject2 = request.GET.get('subject2')
     number = request.GET.get('number')
-    if subject1 and subject2:
-        majors = Major.objects.filter(subject1=subject1, subject2=subject2)
+    if university:
+        if majors:
+            majors = majors.filter(university=university)
+        else:
+            majors = Major.objects.filter(university=university)
+    if subject1:
+        if majors:
+            majors = majors.filter(subject1=subject1)
+        else:
+            majors = Major.objects.filter(subject1=subject1)
+    if subject2:
+        if majors:
+            majors = majors.filter(subject2=subject2)
+        else:
+            majors = Major.objects.filter(subject2=subject2)
     if number:
         if majors :
             majors = majors.filter(minimum_grant_ball__lte=number)
         else:
             majors = Major.objects.filter(minimum_grant_ball__lte=number)
-    return render(request, 'filters.html', {'subjects': subjects,'majors':majors, 'form':request.GET})
+    return render(request, 'filters.html', {'subjects': subjects,'majors':majors, 'form':request.GET, 'universitys':universitys, 'initial':request.GET == {}})

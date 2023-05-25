@@ -380,3 +380,13 @@ caption{
 	font-weight: 600;
 	font-size: 32px;
 }
+
+.danger{
+	color: red;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#majors{
+	transition: scroll-behavior 500ms ease-in-out;
+}
