@@ -1,5 +1,5 @@
 from django.contrib import admin
-from quiz.models import Quiz, Question, Answer, University, UniversityLeftFact, UniversityRightFact, UniversityCategory, Major
+from quiz.models import Quiz, Question, Answer, University, UniversityLeftFact, UniversityRightFact, UniversityCategory, Major, Subject
 
 
 class QuestionAdmin(admin.StackedInline):
@@ -28,5 +28,6 @@ admin.site.register(Quiz, QuizAdmin)
 admin.site.register(Answer)
 admin.site.register(University,UniversityAdmin)
 admin.site.register(UniversityCategory)
+admin.site.register(Subject)
 
 

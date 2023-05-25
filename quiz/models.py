@@ -67,6 +67,14 @@ class UniversityRightFact(models.Model):
     def __str__(self):
         return self.name
 
+
+class Subject(models.Model):
+    name = models.CharField('Названиие предмета', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
 class Major(models.Model):
     university = models.ForeignKey(University, on_delete=models.CASCADE)
     name = models.CharField('Название специальности', max_length=255)
@@ -76,6 +84,8 @@ class Major(models.Model):
     maximum_ball = models.PositiveSmallIntegerField('Максимальный балл')
     avg_ball = models.PositiveSmallIntegerField('Средний балл')
     amount_of_grants = models.PositiveSmallIntegerField('Количество грантов')
+    subject1 = models.ForeignKey(Subject, on_delete=models.CASCADE, blank=True, null=True, related_name='subject1')
+    subject2 = models.ForeignKey(Subject, on_delete=models.CASCADE, blank=True, null=True, related_name='subject2')
 
     def __str__(self):
         return self.name

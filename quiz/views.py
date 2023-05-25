@@ -1,5 +1,7 @@
+from itertools import groupby
+
 from django.shortcuts import render
-from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact, Major
+from quiz.models import Quiz, Question, Answer, University, UniversityRightFact, UniversityLeftFact, Major, Subject
 
 
 
@@ -54,10 +56,31 @@ def homepage(request):
 def major_group(request, university):
     university = University.objects.get(url=university)
     majors = Major.objects.filter(university=university)
-    return render(request, 'majors.html', {'majors': majors,'university':university})
+    sorted_majors = sorted(majors, key=lambda x: (x.subject1.name, x.subject2.name))
+    group_majors = groupby(sorted_majors, key=lambda x: (x.subject1.name, x.subject2.name))
+    results = []
+    for (subject1, subject2), group in group_majors:
+        results.append([f"{subject1} и {subject2}", list(group)])
+    return render(request, 'majors.html', {'majors': results, 'university':university})
 
 
 def major_detail(request, university, pk):
     university = University.objects.get(url=university)
     major = Major.objects.get(pk=pk)
     return render(request, 'major.html', {'major': major, 'university': university})
+
+
+def filters(request):
+    majors = None
+    subjects = Subject.objects.all()
+    subject1 = request.GET.get('subject1')
+    subject2 = request.GET.get('subject2')
+    number = request.GET.get('number')
+    if subject1 and subject2:
+        majors = Major.objects.filter(subject1=subject1, subject2=subject2)
+    if number:
+        if majors :
+            majors = majors.filter(minimum_grant_ball__lte=number)
+        else:
+            majors = Major.objects.filter(minimum_grant_ball__lte=number)
+    return render(request, 'filters.html', {'subjects': subjects,'majors':majors, 'form':request.GET})

@@ -11,11 +11,20 @@
 </head>
 <body>
     {% include 'headeropacity.html' %}
+    {% if majors %}
     <div class="lists-area">
-    {% for major in majors %}
-            <p class="lists"><a href="/university/{{ university.url }}/majors/{{ major.pk }}" class="lists-a">{{ major.code }} {{ major.name }}</a></p>
+    {% for group in majors %}
+        <h3 class="my-30">{{ group.0 }}</h3>
+        {% for major in group.1 %}
+        <p class="lists"><a href="/university/{{ university.url }}/majors/{{ major.pk }}" class="lists-a">{{ major.code }} {{ major.name }}</a></p>
+        {% endfor %}
     {% endfor %}
     </div>
+        {% else %}
+            <div class="container">
+                <h1>У ДАННОГО УНИВЕРСИТЕТА НЕТ ГРАНТОВ!</h1>
+            </div>
+    {% endif %}
     {% include 'footeropacity.html' %}
 </body>
 </html>

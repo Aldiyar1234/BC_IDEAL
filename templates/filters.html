@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>Расширенный поиск</title>
+</head>
+<body>
+    {% include 'headerfirst.html' %}
+    <div class="container">
+        <h1 class="my-30">Расширенный поиск</h1>
+        <form class="search-form">
+            <fieldset>
+                <legend>Заполните данные</legend>
+                <div class="search-form-content">
+                    <div>
+                        <label>Выберите первый предмет</label>
+                        <select name="subject1" >
+                            <option value="" selected>-</option>
+                            {% for subject in subjects %}
+                                <option value="{{ subject.id }}" {% if subject.id|slugify == form.subject1 %}selected="selected"{% endif %}>{{ subject.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Выберите второй предмет</label>
+                        <select name="subject2" >
+                            <option value="" selected>-</option>
+                            {% for subject in subjects %}
+                                <option value="{{ subject.id }}" {% if subject.id|slugify == form.subject2 %}selected="selected"{% endif %}>{{ subject.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Ваше количество баллов на ЕНТ</label>
+                        <input type="number" min="50" placeholder="78" name="number" value="{{ form.number }}">
+                        <button type="submit" class="btn-3">Поиск</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        {% if majors %}
+            <table class="my-30">
+                <caption class="my-30">Список специальностей</caption>
+                    <thead>
+                        <tr>
+                            <th>Университет</th>
+                            <th>Специальность</th>
+                            <th>Мин балл</th>
+                            <th>Макс балл</th>
+                            <th>Срд балл</th>
+                            <th>Клв гранты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for major in majors %}
+                            <tr>
+                                <td><a href="/university/{{ major.university.url }}">{{ major.university.name }}</a></td>
+                                <td><a href="/university/{{ major.university.url }}/majors/{{ major.pk }}">{{ major.name }}</a></td>
+                                <td>{{ major.minimum_grant_ball }}</td>
+                                <td>{{ major.maximum_ball }}</td>
+                                <td>{{ major.avg_ball }}</td>
+                                <td>{{ major.amount_of_grants }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+        {% endif %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

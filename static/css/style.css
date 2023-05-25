@@ -52,7 +52,7 @@ a:hover{
 
 
 .container{
-	max-width: 1300px;
+	width: 1300px;
 	padding: 10px;
 	margin: auto;
 }
@@ -90,8 +90,8 @@ a:hover{
 	background-color: #e0be63;
 	border-radius: 40px;
 	padding: 5px 100px;
+	margin: auto;
 	margin-top: 80px;
-	margin-left: 70px;
 	font-size: 20px;
 }
 
@@ -150,7 +150,14 @@ a:hover{
 	float: right;
 }
 
-
+.btn-3.search{
+	padding: 10px 5px;
+	float: right;
+	margin-top: 3px;
+	width: 300px;
+	margin-right: 10px;
+	text-align: center;
+}
 
 .university-list li{
 	list-style: none;
@@ -207,11 +214,12 @@ a:hover{
 .card img {
 	margin-right: 50px;
 	width: 200px;
+	height: 150px;
 	border-radius: 12px;
 }
 
 .card-body{
-	padding: 40px 0;
+	padding: 10px 0;
 }
 
 .test-card {
@@ -232,7 +240,7 @@ a:hover{
 	font-size: 20px;
 	padding: 10px 50px;
 	border-radius: 50px;
-	margin-left: 300px;
+	margin:0 auto;
 }
 
 .end-test:hover{
@@ -245,7 +253,7 @@ a:hover{
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	border-radius: 12px;
 	padding: 20px;
-	margin: 50px;
+	margin: 100px auto;
 }
 
 .result h3{
@@ -315,4 +323,60 @@ a:hover{
 
 p{
 	margin: 10px;
+}
+
+.search-form{
+	margin:50px 0;
+}
+
+.search-form-content{
+	width: 50%;
+	margin:50px auto;
+}
+
+.search-form input,.search-form select{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 12px;
+	outline: none;
+	border: 1px solid black;
+}
+
+legend{
+	text-align: center	;
+}
+
+table{
+	margin-top: 50px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th{
+	background-color: #e0be63;
+	padding: 20px;
+}
+
+td, th{
+	border: 1px solid black;
+}
+
+td{
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #D9D9D9;
+}
+
+td a{
+	color: #3875d7;
+	font-weight: 600;
+}
+
+caption{
+	font-weight: 600;
+	font-size: 32px;
 }
