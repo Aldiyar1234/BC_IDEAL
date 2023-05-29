@@ -16,12 +16,12 @@
                 <div class="card test-card card-body row my-30">
                     <h5 class="form_name">{{question.name}}</h5>
                     <select class="form_select" name="{{question.id}}">
-                        <option value="YES">Да</option>
-                        <option value="NO" selected>Нет</option>
+                        <option class="form_select" value="YES">Да</option>
+                        <option class="form_select" value="NO" selected>Нет</option>
                     </select>
                 </div>
             {% endfor %}
-            <button class="btn end-test my-30" type="submit">Завершить</button>
+            <button class="btn end-test" type="submit">Завершить</button>
         </form>
     </div>
     {% include 'footer.html' %}

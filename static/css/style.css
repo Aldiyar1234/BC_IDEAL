@@ -49,10 +49,13 @@ a:hover{
 	margin: 30px 0;
 }
 
-
+.my-31{
+	margin: 30px 0;
+	font-size: 30px;
+}
 
 .container{
-	width: 1300px;
+	max-width: 1300px;
 	padding: 10px;
 	margin: auto;
 }
@@ -111,6 +114,9 @@ a:hover{
 	color: #e0be63;
 }
 
+.a-title{
+	margin: auto 0;
+}
 
 .description {
 	margin-left: 20px;
@@ -190,7 +196,9 @@ a:hover{
 }
 
 .intro img {
-	width:60%;
+	width:55%;
+	height: 100%;
+	margin-top: auto;
 }
 
 .intro .container {
@@ -209,12 +217,10 @@ a:hover{
 	font-size: 20px;
 }
 
-
-
 .card img {
 	margin-right: 50px;
-	width: 200px;
-	height: 150px;
+	width: 20%;
+	height: 100%;
 	border-radius: 12px;
 }
 
@@ -289,7 +295,6 @@ a:hover{
 .lists{
 	display: block;
 	text-align: center;
-	width: 1000px;
 	margin:10px auto;
 	background-color: white;
 	padding:10px 50px;
@@ -346,6 +351,15 @@ p{
 
 legend{
 	text-align: center	;
+	font-size: 18px;
+}
+
+label{
+	font-size: 18px;
+}
+
+.selected-size{
+	font-size: 16px;
 }
 
 table{
@@ -389,4 +403,686 @@ caption{
 
 #majors{
 	transition: scroll-behavior 500ms ease-in-out;
+	margin: 0;
+}
+
+.logo-img{
+	margin:auto 0;
+}
+
+@media (max-width: 1200px){
+	.container{
+		max-width: 970px;
+	}
+	.intro-text{
+		font-size: 23px;
+		line-height: 1.4;
+	}
+	.btn-3{
+		margin:auto;
+		font-size: 18px;
+		padding: 5px 95px;
+	}
+	.title{
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	.fact{
+		font-size: 18px;
+	}
+	.colo{
+		font-size: 14px;
+	}
+	.btn-2{
+		font-size: 22px;
+	}
+	.my-30{
+		font-size: 18px;
+		margin: 25px;
+	}
+	.my-31{
+		font-size: 26px;
+	}
+	.lists-a{
+		font-size: 14px;
+	}
+	.list-a{
+		font-size: 14px;
+	}
+	.col-ul{
+		font-size: 14px;
+	}
+	.col-line{
+		font-size: 14px;
+	}
+	.col{
+		font-size: 14px;
+	}
+	.href{
+		font-size: 14px;
+	}
+	.media-h{
+		font-size: 22px;
+	}
+	.university-search{
+		max-width: 325px;
+		padding: 18px;
+		font-size: 13px;
+	}
+	.btn-3.search{
+		max-width: 275px;
+		font-size: 16px;
+	}
+	.card-h{
+		font-size: 18px;
+	}
+	.card-p{
+		margin: 0;
+		font-size: 16px;
+	}
+	.form_name{
+		font-size: 14px;
+	}
+	.form_select{
+		font-size: 12px;
+	}
+	.result h3{
+		font-size: 28px;
+	}
+	.result p{
+		font-size: 16px;
+	}
+	.result{
+		margin: 80px auto;
+	}
+	.btn-4{
+		font-size: 18px;
+		padding: 9px 65px;
+	}
+	legend{
+		font-size: 16px;
+	}
+	label{
+		font-size: 16px;
+	}
+	.selected-size{
+		font-size: 14px;
+	}
+	.but{
+		margin:20px auto;
+		font-size: 18px;
+		padding: 5px 95px;
+	}
+	.description{
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	.test-card select {
+		padding: 8px 35px;
+	}
+	.end-test{
+		font-size: 18px;
+	}
+	.search-form select {
+		padding: 7px;
+	}
+	.search-form input {
+		padding: 10px;
+	}
+	.danger{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 992px){
+	.container{
+		max-width: 780px;
+	}
+	.intro-text{
+		font-size: 21px;
+		line-height: 1.2;
+	}
+	.btn-3{
+		margin:auto;
+		font-size: 16px;
+		padding: 5px 90px;
+	}
+	.title{
+		font-size: 16px;
+		line-height: 1.2;
+	}
+	.fact{
+		font-size: 16px;
+	}
+	.colo{
+		font-size: 12px;
+	}
+	.btn-2{
+		font-size: 20px;
+	}
+	.my-30{
+		margin: 20px;
+		font-size: 16px;
+	}
+	.my-31{
+		font-size: 22px;
+	}
+	.lists-a{
+		font-size: 12px;
+	}
+	.list-a{
+		font-size: 12px;
+	}
+	.col-ul{
+		font-size: 12px;
+	}
+	.col-line{
+		font-size: 12px;
+	}
+	.col{
+		font-size: 12px;
+	}
+	.href{
+		font-size: 12px;
+	}
+	.media-h{
+		font-size: 20px;
+	}
+	.university-search{
+		max-width: 300px;
+		padding: 16px;
+		font-size: 11px;
+	}
+	.btn-3.search{
+		max-width: 250px;
+		font-size: 14px;
+	}
+	.card-h{
+		font-size: 16px;
+	}
+	.card-p{
+		margin: 0;
+		font-size: 12px;
+	}
+	.form_name{
+		font-size: 12px;
+	}
+	.form_select{
+		font-size: 10px;
+	}
+	.result h3{
+		font-size: 26px;
+	}
+	.result p{
+		font-size: 14px;
+	}
+	.result{
+		margin: 60px auto;
+	}
+	.btn-4{
+		font-size: 16px;
+		padding: 8px 60px;
+	}
+	legend{
+		font-size: 14px;
+	}
+	label{
+		font-size: 14px;
+	}
+	.selected-size{
+		font-size: 12px;
+	}
+	.but{
+		margin:20px auto;
+		font-size: 16px;
+		padding: 5px 90px;
+	}
+	.description{
+		font-size: 12px;
+		line-height: 1.2;
+	}
+	.test-card select {
+		padding: 7px 25px;
+	}
+	.end-test{
+		font-size: 16px;
+	}
+	.search-form select {
+		padding: 5px;
+	}
+	.search-form input {
+		padding: 8px;
+	}
+	.danger{
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 781px){
+	.container{
+		max-width: 576px;
+	}
+	.intro-text{
+		font-size: 17px;
+		line-height: 1;
+	}
+	.btn-3{
+		margin:auto;
+		font-size: 14px;
+		padding: 4px 70px;
+	}
+	.title{
+		font-size: 14px;
+		line-height: 1;
+	}
+	.fact{
+		font-size: 14px;
+	}
+	.colo{
+		font-size: 10px;
+	}
+	.btn-2{
+		font-size: 18px;
+		padding: 0;
+	}
+	.my-30{
+		margin: 15px;
+		font-size: 14px;
+	}
+	.my-31{
+		font-size: 20px;
+	}
+	.lists-a{
+		font-size: 10px;
+	}
+	.list-a{
+		font-size: 10px;
+	}
+	.col-ul{
+		font-size: 10px;
+	}
+	.col-line{
+		font-size: 10px;
+	}
+	.col{
+		font-size: 10px;
+	}
+	.href{
+		font-size: 10px;
+	}
+	.media-h{
+		font-size: 18px;
+	}
+	.university-search{
+		max-width: 250px;
+		padding: 14px;
+		font-size: 9px;
+	}
+	.btn-3.search{
+		max-width: 200px;
+		font-size: 12px;
+	}
+	.card-h{
+		font-size: 14px;
+	}
+	.card-p{
+		margin: 0;
+		font-size: 8px;
+	}
+	.form_name{
+		font-size: 10px;
+	}
+	.form_select{
+		font-size: 8px;
+	}
+	.result h3{
+		font-size: 24px;
+	}
+	.result p{
+		font-size: 12px;
+	}
+	.result{
+		margin: 40px auto;
+	}
+	.btn-4{
+		font-size: 14px;
+		padding: 7px 55px;
+	}
+	legend{
+		font-size: 12px;
+	}
+	label{
+		font-size: 12px;
+	}
+	.selected-size{
+		font-size: 10px;
+	}
+	.but{
+		margin:20px auto;
+		font-size: 14px;
+		padding: 5px 85px;
+	}
+	.description{
+		font-size: 10px;
+		line-height: 1;
+	}
+	.test-card select {
+		padding: 5px 20px;
+	}
+	#majors{
+		font-size: 12px;
+	}
+	th{
+		padding: 10px;
+	}
+	td{
+		padding: 10px;
+	}
+	.end-test{
+		font-size: 14px;
+	}
+	.search-form select {
+		padding: 3px;
+	}
+	.search-form input {
+		padding: 6px;
+	}
+	.danger{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 590px){
+	.container{
+		max-width: 450px;
+		line-height: 1;
+	}
+	.intro-text{
+		font-size: 13px;
+		line-height: 1;
+	}
+	.btn-3{
+		margin:auto;
+		font-size: 10px;
+		padding: 3px 40px;
+	}
+	.title{
+		font-size: 12px;
+		line-height: 1;
+	}
+	.fact{
+		font-size: 12px;
+	}
+	.colo{
+		font-size: 8px;
+	}
+	.btn-2{
+		font-size: 16px;
+		padding: 0;
+	}
+	.my-30{
+		margin: 10px;
+		font-size: 12px;
+	}
+	.my-31{
+		font-size: 18px;
+	}
+	.lists-a{
+		font-size: 8px;
+	}
+	.list-a{
+		font-size: 8px;
+	}
+	.col-ul{
+		font-size: 8px;
+	}
+	.col-line{
+		font-size: 8px;
+	}
+	.col{
+		font-size: 8px;
+	}
+	.href{
+		font-size: 8px;
+	}
+	.media-h{
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	.university-search{
+		max-width: 150px;
+		padding: 10px;
+		font-size: 7px;
+	}
+	.btn-3.search{
+		max-width: 150px;
+		font-size: 8px;
+	}
+	.card-h{
+		font-size: 12px;
+	}
+	.card-p{
+		margin: 0;
+		font-size: 6px;
+	}
+	.form_name{
+		font-size: 8px;
+	}
+	.form_select{
+		font-size: 6px;
+	}
+	.result h3{
+		font-size: 20px;
+	}
+	.result p{
+		font-size: 10px;
+	}
+	.result{
+		margin: 20px auto;
+	}
+	.btn-4{
+		font-size: 12px;
+		padding: 5px 45px;
+		margin: 0 auto;
+	}
+	legend{
+		font-size: 10px;
+	}
+	label{
+		font-size: 10px;
+	}
+	.selected-size{
+		font-size: 8px;
+	}
+	.but{
+		margin:20px auto;
+		font-size: 12px;
+		padding: 4px 75px;
+	}
+	.description{
+		font-size: 8px;
+		line-height: 1;
+	}
+	.test-card select {
+		padding: 5px 15px;
+	}
+	#majors{
+		font-size: 6px;
+	}
+	.end-test{
+		font-size: 12px;
+	}
+	.search-form select {
+		padding: 1px;
+	}
+	.search-form input {
+		padding: 4px;
+	}
+	.danger{
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 451px){
+	.container{
+		max-width: 300px;
+	}
+	.intro-text{
+		font-size: 11px;
+		line-height: 1;
+	}
+	.btn-3{
+		margin:auto;
+		font-size: 8px;
+		padding: 2px 30px;
+	}
+	.title{
+		font-size: 10px;
+		line-height: 1;
+	}
+	.fact{
+		font-size: 8px;
+	}
+	.colo{
+		font-size: 6px;
+	}
+	.btn-2{
+		font-size: 10px;
+		padding: 0;
+	}
+	.my-30{
+		margin: 5px;
+		font-size: 10px;
+	}
+	.my-31{
+		font-size: 16px;
+	}
+	.lists-a{
+		font-size: 4px;
+	}
+	.list-a{
+		font-size: 6px;
+	}
+	.col-ul{
+		font-size: 6px;
+	}
+	.col-line{
+		font-size: 6px;
+	}
+	.col{
+		font-size: 6px;
+	}
+	.href{
+		font-size: 6px;
+	}
+	.media-h{
+		margin: 10px 0;
+		font-size: 8px;
+	}
+	.university-search{
+		max-width: 100px;
+		padding: 6px;
+		font-size: 5px;
+	}
+	.btn-3.search{
+		max-width: 100px;
+		font-size: 6px;
+		padding: 5px 3px ;
+	}
+	.card-h{
+		font-size: 6px;
+	}
+	.card-p{
+		margin: 0;
+		font-size: 4px;
+	}
+	.form_name{
+		font-size: 6px;
+	}
+	.form_select{
+		font-size: 4px;
+	}
+	.result h3{
+		font-size: 14px;
+	}
+	.result p{
+		font-size: 8px;
+	}
+	.result{
+		margin:auto;
+	}
+	.btn-4{
+		font-size: 10px;
+		padding: 5px 25px;
+		margin: 0 auto;
+	}
+	legend{
+		font-size: 8px;
+	}
+	label{
+		font-size: 8px;
+	}
+	.selected-size{
+		font-size: 6px;
+	}
+	.but{
+		margin:20px auto;
+		font-size: 10px;
+		padding: 3px 55px;
+	}
+	.description{
+		font-size: 6px;
+		line-height: 1;
+	}
+	.test-card select {
+		padding: 5px 10px;
+	}
+	#majors{
+		font-size: 6px;
+	}
+	.end-test{
+		font-size: 10px;
+	}
+	.search-form select {
+		padding: 1px;
+	}
+	.search-form input {
+		padding: 4px;
+	}
+	.danger{
+		font-size: 8px;
+	}
+	.intro{
+		margin-top: -200px;
+	}
+	.li-text{
+		margin: 10px auto;
+	}
+	.university-list li {
+		padding: 10px ;
+	}
+	.title.my-30.h1{
+		margin: 0 auto;
+	}
+	.lists{
+		padding: 2px 30px;
+	}
+	.list-h3{
+		font-size: 8px;
+	}
+	p{
+		margin: 4px;
+	}
+	th{
+		padding: 3px;
+	}
+	td{
+		padding: 3px;
+	}
+	.margin{
+		margin:22px auto;
+	}
+	.card img{
+		margin-right: 10px;
+	}
 }

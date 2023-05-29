@@ -14,13 +14,13 @@
 <body class="bodd">
     {% include 'headerfirst.html' %}
     <div class="container">
-   <h2 class="my-30">Тесты</h2>
+    <h2 class="my-30 margin">Тесты</h2>
     {% for quiz in tests %}
-    <a class="card row my-30" href="/quizez/{{quiz.pk}}">
+    <a class="card row my-30 margin" href="/quizez/{{quiz.pk}}">
         <img src="{{ quiz.image.url }}" alt="">
         <div class="card-body">
-            <h3>Тест - {{quiz.name}}</h3>
-            <p>{{quiz.description}}</p>
+            <h3 class="card-h">Тест - {{quiz.name}}</h3>
+            <p class="card-p">{{quiz.description}}</p>
         </div>
     </a>
     {% endfor %}

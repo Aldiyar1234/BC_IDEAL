@@ -12,7 +12,7 @@
 <body>
     {% include 'headerfirst.html' %}
     <div class="container">
-        <h1 class="my-30">Расширенный поиск</h1>
+        <h1 class="my-31">Расширенный поиск</h1>
         <form class="search-form">
             <fieldset>
                 <legend>Заполните данные</legend>
@@ -25,7 +25,7 @@
                         <select name="university" >
                             <option value="" selected>-</option>
                             {% for university in universitys %}
-                                <option value="{{ university.id }}" {% if university.id|slugify == form.university %}selected="selected"{% endif %}>{{ university.name }}</option>
+                                <option class="selected-size" value="{{ university.id }}" {% if university.id|slugify == form.university %}selected="selected"{% endif %}>{{ university.name }}</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -34,7 +34,7 @@
                         <select name="subject1" >
                             <option value="" selected>-</option>
                             {% for subject in subjects %}
-                                <option value="{{ subject.id }}" {% if subject.id|slugify == form.subject1 %}selected="selected"{% endif %}>{{ subject.name }}</option>
+                                <option class="selected-size" value="{{ subject.id }}" {% if subject.id|slugify == form.subject1 %}selected="selected"{% endif %}>{{ subject.name }}</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -43,20 +43,20 @@
                         <select name="subject2" >
                             <option value="" selected>-</option>
                             {% for subject in subjects %}
-                                <option value="{{ subject.id }}" {% if subject.id|slugify == form.subject2 %}selected="selected"{% endif %}>{{ subject.name }}</option>
+                                <option class="selected-size" value="{{ subject.id }}" {% if subject.id|slugify == form.subject2 %}selected="selected"{% endif %}>{{ subject.name }}</option>
                             {% endfor %}
                         </select>
                     </div>
                     <div>
                         <label>Ваше количество баллов на ЕНТ</label>
-                        <input type="number" min="50" placeholder="78" name="number" value="{{ form.number }}">
-                        <button type="submit" class="btn-3">Поиск</button>
+                        <input class="selected-size" type="number" min="50" placeholder="78" name="number" value="{{ form.number }}">
+                        <button type="submit" class="but btn-3">Поиск</button>
                     </div>
                 </div>
             </fieldset>
         </form>
         {% if majors %}
-            <table id="majors" class="my-30">
+            <table id="majors" class="my-30 majors-table">
                 <caption class="my-30">Список специальностей</caption>
                     <thead>
                         <tr>

@@ -11,9 +11,10 @@
 </head>
 <body class="">
     {% include 'headerfirst.html' %}
-
-   <h1 class="title my-30">{{ university.name }}</h1>
-   <div class="row container">
+    <div class="container">
+        <h1 class="title my-30 h1">{{ university.name }}</h1>
+    </div>
+    <div class="row container">
        <div class="col">
            {% for fact in university_left_facts %}
            <p class="fact">{{ fact.name }}</p>
@@ -27,11 +28,11 @@
            <p class="fact">{{ fact.name }}</p>
            {% endfor %}
        </div>
-   </div>
+    </div>
 
    <div class="row container">
        <div class="col">
-           <a href="http://{{ university.href }}" class="">{{ university.href }}</a>
+           <a href="http://{{ university.href }}" class="href">{{ university.href }}</a>
        </div>
        <div class="col">
           <div class="colo">Вся информация несёт информативный характер!</div>

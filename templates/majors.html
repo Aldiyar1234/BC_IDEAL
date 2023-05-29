@@ -12,9 +12,9 @@
 <body>
     {% include 'headeropacity.html' %}
     {% if majors %}
-    <div class="lists-area">
+    <div class="lists-area container">
     {% for group in majors %}
-        <h3 class="my-30">{{ group.0 }}</h3>
+        <h3 class="my-30 list-h3">{{ group.0 }}</h3>
         {% for major in group.1 %}
         <p class="lists"><a href="/university/{{ university.url }}/majors/{{ major.pk }}" class="lists-a">{{ major.code }} {{ major.name }}</a></p>
         {% endfor %}
