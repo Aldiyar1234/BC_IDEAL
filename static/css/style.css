@@ -925,11 +925,12 @@ caption{
 
 @media (max-width: 451px){
 	.container{
-		max-width: 300px;
+		max-width: 400px;
+		margin: 0;
 	}
 	.intro-text{
 		font-size: 11px;
-		line-height: 1;
+		line-height: 1.4;
 	}
 	.btn-3{
 		margin:auto;
@@ -1052,9 +1053,6 @@ caption{
 	.danger{
 		font-size: 8px;
 	}
-	.intro{
-		margin-top: -200px;
-	}
 	.li-text{
 		margin: 10px auto;
 	}
@@ -1084,5 +1082,11 @@ caption{
 	}
 	.card img{
 		margin-right: 10px;
+	}
+	footer{
+		margin-top: 0;
+	}
+	.auto{
+		margin:20px auto;
 	}
 }
